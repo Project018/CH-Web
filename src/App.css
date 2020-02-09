@@ -1,0 +1,16 @@
+main {
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+
+.navbar {
+    background-color: #000;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0;
+    list-style: none;
+    text-decoration: none;
+}
