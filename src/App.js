@@ -336,6 +336,10 @@ class App extends Component {
       {id: 325, name: "University of Washington", backgroundColor: "#4B2E83", hexcode: "#4B2E83", rgb: '(51, 0, 111)', category: 'School, Purple', full: 'University of Washington, #4B2E83, (51, 0, 111)', color: '#FFFFFF'},
       {id: 326, name: "University of Washington", backgroundColor: "#B7A57A", hexcode: "#B7A57A", rgb: '(232, 211, 162)', category: 'School, Gold', full: 'University of Washington, #B7A57A, (232, 211, 162)', color: '#FFFFFF'},
       {id: 327, name: "University of Washington", backgroundColor: "#85754D", hexcode: "#85754D", rgb: '(145, 123, 76)', category: 'School, Gold', full: 'University of Washington, #85754D, (145, 123, 76)', color: '#FFFFFF'},
+      {id: 328, name: "Los Angeles Lakers", backgroundColor: "#FDBA21", hexcode: "#FDBA21", rgb: '(253, 186, 33)', category: 'NBA, Gold', full: 'Los Angeles Lakers, #FDBA21, (253, 186, 33)', color: '#FFFFFF'},
+      {id: 329, name: "Los Angeles Lakers", backgroundColor: "#552084", hexcode: "#552084", rgb: '(85, 32, 132)', category: 'NBA, Purple', full: 'Los Angeles Lakers, #552084, (85, 32, 132)', color: '#FFFFFF'},
+      {id: 330, name: "Mailchimp", backgroundColor: "#FFE01B", hexcode: "#FFE01B", rgb: '(255, 224, 27)', category: 'Brand, Yellow', full: 'Mailchimp, #FFE01B, (255, 224, 27)', color: '#000000'},
+      {id: 331, name: "Mailchimp", backgroundColor: "#241C15", hexcode: "#241C15", rgb: '(36, 28, 21)', category: 'Brand, Black', full: 'Mailchimp, #241C15, (36, 28, 21)', color: '#FFFFFF'},
     ],
     search: ''
   };
