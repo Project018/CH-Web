@@ -341,6 +341,7 @@ class App extends Component {
   };
 
   render() {
+    console.log("hello");
     return (
       <BrowserRouter>
           <Switch>
