@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import './Footer.css';
 
 
@@ -13,7 +13,7 @@ class Footer extends Component {
             </div>
             <div>
                 <ul className="list-inline">
-                    <li><Link to="/faq">FAQ</Link></li>          
+                    <li><a href="./FAQ.js">FAQ</a></li>          
                     <li><a href="mailto:info@channelhue.com">Contact</a></li>
                     <li><a href="https://twitter.com/HTMLSportsDad">Twitter</a></li>
                 </ul>

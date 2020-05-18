@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import ClipboardJS from 'clipboard';
 import './Cards.css';
 
+// Using clipboard package to create copy on click functionality
 const clipboard = new ClipboardJS('.card-body');
 clipboard.on('success', function(e) {
     const copy = e.trigger.querySelector(".copied");
@@ -19,14 +20,17 @@ clipboard.on('error', function(e) {
 });
 
 function shuffleColors(array) {
+    // Shuffle through objects in array 
     let i = array.length - 1;
     for (; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
+      const j = Math.floor(Math.random() * (i + 1))
       const temp = array[i];
       array[i] = array[j];
       array[j] = temp;
     }
-    return array;
+    // Display 50 colors
+    const copy = array.slice(0, 80)
+    return copy;
 } 
 
 function searchingFor(search) {
@@ -35,11 +39,17 @@ function searchingFor(search) {
     }
 }
 
-class Cards extends Component {
-    state = {
-        search: ''
-    }
 
+class Cards extends Component {
+    constructor(props) {
+        super(props); 
+
+        this.state = {
+            search: '',
+            colorOnly: {}
+        }
+    }  
+    
     searchHandler(event){
         this.setState({search: event.target.value})
     }
@@ -47,25 +57,21 @@ class Cards extends Component {
     render() {
         const colorDetails  = this.props.colorDetails;
         const shuffledCards = shuffleColors(colorDetails);
+        
 
         return (
             <Fragment>
-                <nav className="navbar fixed-top navbar-light">
-                    <a className="navbar-brand" href="/">
-                        <img src={require("../img/logo.png")} alt="Channel Hue logo" />
-                    </a>
-                    <form>
-                        <input 
-                            type="search"
-                            className="form-control ds-input"
-                            id="search-input"
-                            placeholder="Search..."
-                            onChange={(e) => this.searchHandler(e)}
-                            value={this.state.search} 
-                            spellCheck="false" 
-                        />
-                    </form>
-                </nav>
+                <form className="container">
+                    <input 
+                        type="search"
+                        className="form-control ds-input"
+                        id="search-input"
+                        placeholder="Search..."
+                        onChange={(e) => this.searchHandler(e)}
+                        value={this.state.search} 
+                        spellCheck="false" 
+                    />
+                </form>
                 <main role="main">
                 <div className="card-container">
                     {shuffledCards.filter(searchingFor(this.state.search)).map(({id, backgroundColor, name, hexcode, category, color}) => (
@@ -79,6 +85,7 @@ class Cards extends Component {
                         </div>
                     ))}
                 </div>
+                <button>Load More</button>
                 </main>
             </Fragment>
         );

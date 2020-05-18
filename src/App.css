@@ -14,3 +14,7 @@ main {
     list-style: none;
     text-decoration: none;
 }
+
+form {
+    margin-top: 100px;
+}
