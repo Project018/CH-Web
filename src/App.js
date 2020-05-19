@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Nav from './components/Nav';
+import Header from './components/Header';
 import Cards from './components/Cards';
 import Footer from './components/Footer';
 
@@ -9,8 +9,6 @@ import './App.css';
 class App extends Component {
   constructor(props) {
     super(props); 
-
-    this.showRed = this.showRed.bind(this);
 
     this.state = {
       details: [
@@ -345,28 +343,23 @@ class App extends Component {
         {id: 331, name: "Mailchimp", backgroundColor: "#241C15", hexcode: "#241C15", rgb: '(36, 28, 21)', category: 'Brand, Black', full: 'Mailchimp, #241C15, (36, 28, 21)', color: '#FFFFFF'},
         {id: 332, name: "Golden State Warriors", backgroundColor: "#1D428A", hexcode: "#1D428A", rgb: '(29,66,138)', category: 'NBA, Blue', full: 'Golden State Warriors, #1D428A, (29,66,138)', color: '#FFFFFF'},
         {id: 333, name: "Golden State Warriors", backgroundColor: "#FFC72C", hexcode: "#FFC72C", rgb: '(255,199,44)', category: 'NBA, Yellow', full: 'Golden State Warriors, #FFC72C, (255,199,44)', color: '#000000'},
-      ]
+        {id: 334, name: "Lyft", backgroundColor: "#FF00BF", hexcode: "#FF00BF", rgb: '(255,0,191)', category: 'Brand, Pink', full: 'Lyft, #FF00BF, (255,0,191)', color: '#000000'},
+        {id: 335, name: "Slack", backgroundColor: "#36C5F0", hexcode: "#36C5F0", rgb: '(54,197,240)', category: 'Brand, Blue', full: 'Slack, #36C5F0, (54,197,240)', color: '#FFFFFF'},
+        {id: 336, name: "Slack", backgroundColor: "#2EB67D", hexcode: "#2EB67D", rgb: '(46,182,125)', category: 'Brand, Green', full: 'Slack, #2EB67D, (46 182 125)', color: '#FFFFFF'},
+        {id: 337, name: "Slack", backgroundColor: "#E01E5A", hexcode: "#E01E5A", rgb: '(224,30,90)', category: 'Brand, Red', full: 'Slack, #E01E5A, (224 30 90)', color: '#FFFFFF'},
+        {id: 338, name: "Slack", backgroundColor: "#ECB22E", hexcode: "#ECB22E", rgb: '(236,178,46)', category: 'Brand, Yellow', full: 'Slack, #ECB22E, (236,178,46)', color: '#FFFFFF'},
+        {id: 339, name: "Microsoft", backgroundColor: "#F25022", hexcode: "#F25022", rgb: '(242,80,34)', category: 'Brand, Orange, Red', full: 'Microsoft, #F25022, (242,80,34)', color: '#FFFFFF'},
+        {id: 340, name: "Microsoft", backgroundColor: "#7FBA00", hexcode: "#7FBA00", rgb: '(127,186,0)', category: 'Brand, Green', full: 'Microsoft, #7FBA00, (127,186,0)', color: '#FFFFFF'},
+        {id: 341, name: "Microsoft", backgroundColor: "#00A4EF", hexcode: "#00A4EF", rgb: '(0,164,239)', category: 'Brand, Blue', full: 'Microsoft, #00A4EF, (0,164,239)', color: '#FFFFFF'},
+        {id: 342, name: "Microsoft", backgroundColor: "#FFB900", hexcode: "#FFB900", rgb: '(255,185,0)', category: 'Brand, Yellow', full: 'Microsoft, #FFB900, (255,185,0)', color: '#FFFFFF'},
+      ],
     };
   }
   
-  showRed() {
-    const details = this.state.details;
-    const redOnly = details.filter(color => color.category === 'Red')
-    console.log(redOnly)
-
-    // send call to cards component to update cards list to show only red
-
-    // this.setState((prev) => {
-    //   return {
-    //     details: prev.details.category
-    //   }
-    // })
-  }
-
   render() {
     return (
       <>
-        <Nav colorDetails={this.state.details} showRed={this.showRed} />
+        <Header />
         <Cards colorDetails={this.state.details} />
         <Footer />
       </>

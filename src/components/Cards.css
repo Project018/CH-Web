@@ -22,3 +22,9 @@
     display: block;
     
 }
+
+button#red,
+button#blue,
+button#All {
+    margin: 0 10px;
+}

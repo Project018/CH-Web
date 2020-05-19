@@ -29,14 +29,74 @@ function shuffleColors(array) {
       array[j] = temp;
     }
     // Display 50 colors
-    const copy = array.slice(0, 80)
-    return copy;
+    // const copy = array.slice(0, 80)
+    // return copy;
+
+    return array
 } 
 
-function searchingFor(search) {
-    return function(x) {
-        return x.name.toLowerCase().includes(search.toLowerCase()) || x.hexcode.toLowerCase().includes(search.toLowerCase()) || x.category.toLowerCase().includes(search.toLowerCase()) || !search;
-    }
+// TODO: Search functionality
+// function searchingFor(search) {
+//     return function(x) {
+//         return x.name.toLowerCase().includes(search.toLowerCase()) || x.hexcode.toLowerCase().includes(search.toLowerCase()) || x.category.toLowerCase().includes(search.toLowerCase()) || !search;
+//     }
+// }
+
+// All Colors Component
+const All = (props) => {
+    const colorDetails  = props.colorDetails;
+    const shuffledCards = shuffleColors(colorDetails);
+
+    return (
+       shuffledCards.map(({id, backgroundColor, name, hexcode, category, color}) => (
+            <div className="card" key={id}>
+                <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
+                    <h5 className="card-title">{name}</h5>
+                    <h6 className="card-subtitle mb-2">{hexcode}</h6>
+                    <p className="card-text">Tags: {category}</p>
+                    <div className="copied">Copied!</div>
+                </div>
+            </div>
+        ))
+    )
+}
+
+// Red Colors Component
+const Red = (props) => {
+    const colorDetails = props.colorDetails;
+    const redOnly = colorDetails.filter(color => color.category.includes('Red'))
+
+    return (
+        redOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
+            <div className="card" key={id}>
+                <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
+                    <h5 className="card-title">{name}</h5>
+                    <h6 className="card-subtitle mb-2">{hexcode}</h6>
+                    <p className="card-text">Tags: {category}</p>
+                    <div className="copied">Copied!</div>
+                </div>
+            </div>
+        ))
+    )
+}
+
+// Blue Colors Component
+const Blue = (props) => {
+    const colorDetails = props.colorDetails;
+    const blueOnly = colorDetails.filter(color => color.category.includes('Blue'))
+
+    return (
+        blueOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
+            <div className="card" key={id}>
+                <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
+                    <h5 className="card-title">{name}</h5>
+                    <h6 className="card-subtitle mb-2">{hexcode}</h6>
+                    <p className="card-text">Tags: {category}</p>
+                    <div className="copied">Copied!</div>
+                </div>
+            </div>
+        ))
+    )
 }
 
 
@@ -46,22 +106,41 @@ class Cards extends Component {
 
         this.state = {
             search: '',
-            colorOnly: {}
+            showAll: true,
+            showRed: false,
+            showBlue: false
         }
+
+        this.buttonClick = this.buttonClick.bind(this)
     }  
     
-    searchHandler(event){
-        this.setState({search: event.target.value})
+    // switch statment to render component based off button click
+    buttonClick(color) {    
+        switch (color) {
+            case "All":
+                this.setState({ showAll: true, showRed: false, showBlue: false});
+                break;
+            case "Red":
+                this.setState({ showRed: true, showAll: false, showBlue: false});
+                break;
+            case "Blue":
+                this.setState({ showBlue: true, showAll: false, showRed: false});
+                break;
+            default: 
+            console.log('nothing to show')
+        }
     }
 
+    // searchHandler(event){
+    //     this.setState({search: event.target.value})
+    // }
+
     render() {
-        const colorDetails  = this.props.colorDetails;
-        const shuffledCards = shuffleColors(colorDetails);
-        
+        const {showAll, showRed, showBlue} = this.state;
 
         return (
             <Fragment>
-                <form className="container">
+                {/* <form className="container">
                     <input 
                         type="search"
                         className="form-control ds-input"
@@ -71,21 +150,20 @@ class Cards extends Component {
                         value={this.state.search} 
                         spellCheck="false" 
                     />
-                </form>
+                </form> */}
                 <main role="main">
-                <div className="card-container">
-                    {shuffledCards.filter(searchingFor(this.state.search)).map(({id, backgroundColor, name, hexcode, category, color}) => (
-                        <div className="card" key={id}>
-                            <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
-                                <h5 className="card-title">{name}</h5>
-                                <h6 className="card-subtitle mb-2">{hexcode}</h6>
-                                <p className="card-text">Tags: {category}</p>
-                                <div className="copied">Copied!</div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-                <button>Load More</button>
+                    <div className="container">
+                        <p>Total colors: 342</p>
+                        <button onClick={() => this.buttonClick("All")}>All Colors</button> 
+                        <button onClick={() => this.buttonClick("Red")}>Red</button>
+                        <button onClick={() => this.buttonClick("Blue")}>Blue</button>
+                    </div>
+
+                    <div className="card-container">
+                        {showAll && <All colorDetails={this.props.colorDetails} />}
+                        {showRed && <Red colorDetails={this.props.colorDetails} />}
+                        {showBlue && <Blue colorDetails={this.props.colorDetails} />}
+                    </div>
                 </main>
             </Fragment>
         );
