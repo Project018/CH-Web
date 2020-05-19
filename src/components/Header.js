@@ -7,6 +7,7 @@ const Header = () => {
             <a className="navbar-brand" href="/">
                 <img src={require("../img/logo.png")} alt="Channel Hue logo" />
             </a>
+            <p>Total Colors: 342</p>
         </header>
     )
 }

@@ -23,8 +23,6 @@
     
 }
 
-button#red,
-button#blue,
-button#All {
+button {
     margin: 0 10px;
 }
