@@ -17,3 +17,7 @@ Tags include:
 - Brand
 - NBA
 - School
+
+Future improvements: 
+- Search functionality
+- More colors
