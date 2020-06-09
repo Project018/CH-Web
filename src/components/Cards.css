@@ -1,28 +1,32 @@
 .card-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.card {
-    width: 18rem;
-    margin: 10px;
+.card-container .card {
+  width: 18rem;
+  margin: 10px;
 }
 
-.card-body {
-    cursor: pointer;
+.card-container .card .card-body {
+  cursor: pointer;
 }
 
-.copied {
-    display: none;
+.card-container .card .card-body .copied {
+  display: none;
 }
 
-.copy-tooltip {
-    display: block;
-    
+.card-container .card .card-body .copied.copy-tooltip {
+  display: block;
 }
-
-button {
-    margin: 0 10px;
-}
+/*# sourceMappingURL=Cards.css.map */

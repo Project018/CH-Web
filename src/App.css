@@ -1,28 +1,42 @@
-main {
-    margin-top: 70px;
-    margin-bottom: 20px;
-}
-
 .navbar {
-    background-color: #000;
+  background-color: #000;
+  color: #e2e2ee;
 }
 
-.nav-list {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 0;
-    list-style: none;
-    text-decoration: none;
+.navbar p {
+  margin: 0;
 }
 
-button.-margin {
-    margin: 15px 3px 5px;
+main {
+  margin-top: 70px;
+  margin-bottom: 20px;
 }
 
-header {
-    color: #e2e2ee;
+main ._buttonGroup button {
+  margin: 0 10px;
 }
 
-header p {
-    margin: 0;
+main ._buttonGroup button.-margin {
+  margin: 15px 3px 5px;
 }
+
+main .toTheTop {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  z-index: 99;
+  font-size: 18px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  padding: 1%;
+  text-decoration: none;
+  background-color: #FFDE16;
+  color: black;
+  cursor: pointer;
+}
+
+main .toTheTop:hover {
+  background-color: #F5AB35;
+}
+/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,39 @@
+.navbar {
+    background-color: #000;
+    color: #e2e2ee;
+    p {
+        margin: 0;
+    }
+}
+
+main {
+    margin-top: 70px;
+    margin-bottom: 20px;
+    ._buttonGroup {
+        button {
+            margin: 0 10px;
+            &.-margin {
+                margin: 15px 3px 5px;
+            }
+        }
+    }
+    .toTheTop {
+        //display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 10px;
+        z-index: 99;
+        font-size: 18px;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        padding: 1%;
+        text-decoration: none;
+        background-color: #FFDE16;
+        color: black;
+        cursor: pointer;
+        &:hover {
+            background-color: #F5AB35;
+        }
+    }
+}

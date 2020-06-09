@@ -329,11 +329,42 @@ class Cards extends Component {
             search: '',
             showAll: true,
             showRed: false,
-            showBlue: false
+            showBlue: false,
+            scrolling: false
         }
 
         this.buttonClick = this.buttonClick.bind(this)
     }  
+
+    componentDidMount() {
+        window.addEventListener("scroll", this.handleScroll);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener("scroll", this.handleScroll);
+    }
+
+    handleScroll = () => {
+        // if no scroll set button to display none
+        if (window.scrollY === 0 && this.state.scrolling === true) {
+            this.setState({scrolling: false}) 
+        }
+        // if scroll detected set button to display block
+        else if (window.scrollY !== 0 && this.state.scrolling !== true) { 
+            this.setState({scrolling: true})
+        }
+    }
+    
+    // Scroll to the top once click button
+    ScrollTop = () => {
+        if (window.scrollY > 30) {
+            window.scrollTo({
+                top: 0, 
+                left: 0,
+                behavior: "smooth"
+            })
+        }
+    }
     
     // switch statment to render component based off button click
     buttonClick(color) {    
@@ -429,6 +460,8 @@ class Cards extends Component {
                         {showNBA && <NBA colorDetails={this.props.colorDetails} />}
                         {showSchool && <School colorDetails={this.props.colorDetails} />}
                     </div>
+
+                    <button className="toTheTop" style={{display: this.state.scrolling ? "block" : "none"}} onClick={() => this.ScrollTop()}>Top</button>                    
                 </main>
             </Fragment>
         );
