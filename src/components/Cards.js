@@ -42,7 +42,7 @@ const All = (props) => {
 
     return (
        shuffledCards.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div className="card" key={id}>
+            <div role="listitem" className="card" key={id}>
                 <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
                     <h5 className="card-title">{name}</h5>
                     <h6 className="card-subtitle mb-2">{hexcode}</h6>
@@ -61,7 +61,7 @@ const Red = (props) => {
 
     return (
         redOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div className="card" key={id}>
+            <div role="listitem" className="card" key={id}>
                 <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
                     <h5 className="card-title">{name}</h5>
                     <h6 className="card-subtitle mb-2">{hexcode}</h6>
@@ -80,7 +80,7 @@ const Blue = (props) => {
 
     return (
         blueOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div className="card" key={id}>
+            <div role="listitem" className="card" key={id}>
                 <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
                     <h5 className="card-title">{name}</h5>
                     <h6 className="card-subtitle mb-2">{hexcode}</h6>
@@ -99,7 +99,7 @@ const Green = (props) => {
 
     return (
         greenOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div className="card" key={id}>
+            <div role="listitem" className="card" key={id}>
                 <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
                     <h5 className="card-title">{name}</h5>
                     <h6 className="card-subtitle mb-2">{hexcode}</h6>
@@ -118,7 +118,7 @@ const Purple = (props) => {
 
     return (
         purpleOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div className="card" key={id}>
+            <div role="listitem" className="card" key={id}>
                 <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
                     <h5 className="card-title">{name}</h5>
                     <h6 className="card-subtitle mb-2">{hexcode}</h6>
@@ -137,7 +137,7 @@ const Orange = (props) => {
 
     return (
         orangeOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div className="card" key={id}>
+            <div role="listitem" className="card" key={id}>
                 <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
                     <h5 className="card-title">{name}</h5>
                     <h6 className="card-subtitle mb-2">{hexcode}</h6>
@@ -156,7 +156,7 @@ const Yellow = (props) => {
 
     return (
         yellowOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div className="card" key={id}>
+            <div role="listitem" className="card" key={id}>
                 <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
                     <h5 className="card-title">{name}</h5>
                     <h6 className="card-subtitle mb-2">{hexcode}</h6>
@@ -175,7 +175,7 @@ const Pink = (props) => {
 
     return (
         pinkOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div className="card" key={id}>
+            <div role="listitem" className="card" key={id}>
                 <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
                     <h5 className="card-title">{name}</h5>
                     <h6 className="card-subtitle mb-2">{hexcode}</h6>
@@ -194,7 +194,7 @@ const Brown = (props) => {
 
     return (
         brownOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div className="card" key={id}>
+            <div role="listitem" className="card" key={id}>
                 <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
                     <h5 className="card-title">{name}</h5>
                     <h6 className="card-subtitle mb-2">{hexcode}</h6>
@@ -213,7 +213,7 @@ const Gray = (props) => {
 
     return (
         grayOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div className="card" key={id}>
+            <div role="listitem" className="card" key={id}>
                 <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
                     <h5 className="card-title">{name}</h5>
                     <h6 className="card-subtitle mb-2">{hexcode}</h6>
@@ -232,7 +232,7 @@ const Black = (props) => {
 
     return (
         blackOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div className="card" key={id}>
+            <div role="listitem" className="card" key={id}>
                 <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
                     <h5 className="card-title">{name}</h5>
                     <h6 className="card-subtitle mb-2">{hexcode}</h6>
@@ -251,7 +251,7 @@ const White = (props) => {
 
     return (
         whiteOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div className="card" key={id}>
+            <div role="listitem" className="card" key={id}>
                 <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
                     <h5 className="card-title">{name}</h5>
                     <h6 className="card-subtitle mb-2">{hexcode}</h6>
@@ -270,7 +270,7 @@ const Brand = (props) => {
 
     return (
         brandOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div className="card" key={id}>
+            <div role="listitem" className="card" key={id}>
                 <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
                     <h5 className="card-title">{name}</h5>
                     <h6 className="card-subtitle mb-2">{hexcode}</h6>
@@ -289,7 +289,7 @@ const NBA = (props) => {
 
     return (
         nbaOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div className="card" key={id}>
+            <div role="listitem" className="card" key={id}>
                 <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
                     <h5 className="card-title">{name}</h5>
                     <h6 className="card-subtitle mb-2">{hexcode}</h6>
@@ -308,7 +308,7 @@ const School = (props) => {
 
     return (
         schoolOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div className="card" key={id}>
+            <div role="listitem" className="card" key={id}>
                 <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
                     <h5 className="card-title">{name}</h5>
                     <h6 className="card-subtitle mb-2">{hexcode}</h6>
@@ -424,8 +424,8 @@ class Cards extends Component {
 
         return (
             <Fragment>
-                <main role="main">
-                    <div className="container _buttonGroup">
+                <main>
+                    <div role="toolbar" className="container _buttonGroup">
                         <button type="button" className={`btn ${showAll ? "btn-dark" : "btn-outline-dark"} -margin`} onClick={() => this.buttonClick("All")}>All</button> 
                         <button type="button" className={`btn ${showRed ? "btn-dark" : "btn-outline-dark"} -margin`} onClick={() => this.buttonClick("Red")}>Red</button>
                         <button type="button" className={`btn ${showBlue ? "btn-dark" : "btn-outline-dark"} -margin`} onClick={() => this.buttonClick("Blue")}>Blue</button>
@@ -443,7 +443,7 @@ class Cards extends Component {
                         <button type="button" className={`btn ${showSchool ? "btn-dark" : "btn-outline-dark"} -margin`} onClick={() => this.buttonClick("School")}>School</button>
                     </div>
 
-                    <div className="card-container">
+                    <section role="list" className="card-container">
                         {showAll && <All colorDetails={this.props.colorDetails} />}
                         {showRed && <Red colorDetails={this.props.colorDetails} />}
                         {showBlue && <Blue colorDetails={this.props.colorDetails} />}
@@ -459,7 +459,7 @@ class Cards extends Component {
                         {showBrand && <Brand colorDetails={this.props.colorDetails} />}
                         {showNBA && <NBA colorDetails={this.props.colorDetails} />}
                         {showSchool && <School colorDetails={this.props.colorDetails} />}
-                    </div>
+                    </section>
 
                     <button className="toTheTop" style={{display: this.state.scrolling ? "block" : "none"}} onClick={() => this.ScrollTop()}>Top</button>                    
                 </main>

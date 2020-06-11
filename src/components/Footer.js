@@ -7,11 +7,11 @@ class Footer extends Component {
   render() {
     return (
         <footer className="card-footer text-muted footer mt-auto py-3">
-            <div>
+            <div role="contentinfo">
                 <h5 className="about">About</h5>
                 <p>Channel Hue is a digital crayon box that provides you with web colors to advance your creative work flow. Channel Hue was made for everyone with the philosophy of simplicity, utility, and community. Our current collection consists of web, flat, brand, and university colors.</p>
             </div>
-            <div>
+            <div role="contentinfo">
                 <p className="copy-text">© 2020 Channel Hue. All Rights Reserved. Shaked and baked by <a href="https://www.deshaunlab.com" target="_blank" rel="noopener noreferrer">DeShaun</a></p>
             </div>
         </footer>
