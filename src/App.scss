@@ -18,7 +18,9 @@ main {
         }
     }
     .toTheTop {
-        //display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 70px;
         position: fixed;
         bottom: 20px;
         right: 10px;

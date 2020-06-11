@@ -461,7 +461,10 @@ class Cards extends Component {
                         {showSchool && <School colorDetails={this.props.colorDetails} />}
                     </section>
 
-                    <button className="toTheTop" style={{display: this.state.scrolling ? "block" : "none"}} onClick={() => this.ScrollTop()}>Top</button>                    
+                    <button className="toTheTop" style={{display: this.state.scrolling ? "flex" : "none"}} onClick={() => this.ScrollTop()}>
+                    <i className="fas fa-arrow-up"></i>
+                        Top
+                    </button>                    
                 </main>
             </Fragment>
         );
