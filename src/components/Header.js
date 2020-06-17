@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Header = () => {
+const Header = (props) => {
 
     return (
         <header className="navbar fixed-top navbar-light">

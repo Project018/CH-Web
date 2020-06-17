@@ -1,335 +1,29 @@
 import React, { Component, Fragment } from 'react';
-import ClipboardJS from 'clipboard';
 import './Cards.css';
 
-// Using clipboard package to create copy on click functionality
-const clipboard = new ClipboardJS('.card-body');
-clipboard.on('success', function(e) {
-    const copy = e.trigger.querySelector(".copied");
-    const parent = copy.parentElement;
-    copy.classList.add("copy-tooltip");
-    parent.addEventListener("mouseleave", () => {
-        copy.classList.remove("copy-tooltip");
-    });
-    e.clearSelection();
-});
-
-clipboard.on('error', function(e) {
-    console.error('Action:', e.action);
-    console.error('Trigger:', e.trigger);
-});
-
-function shuffleColors(array) {
-    // Shuffle through objects in array 
-    let i = array.length - 1;
-    for (; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1))
-      const temp = array[i];
-      array[i] = array[j];
-      array[j] = temp;
-    }
-    // Display 50 colors
-    // const copy = array.slice(0, 80)
-    // return copy;
-
-    return array
-}
-
-// All Colors Component
-const All = (props) => {
-    const colorDetails  = props.colorDetails;
-    const shuffledCards = shuffleColors(colorDetails);
-
-    return (
-       shuffledCards.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div role="listitem" className="card" key={id}>
-                <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
-                    <h5 className="card-title">{name}</h5>
-                    <h6 className="card-subtitle mb-2">{hexcode}</h6>
-                    <p className="card-text">Tags: {category}</p>
-                    <div className="copied">Copied!</div>
-                </div>
-            </div>
-        ))
-    )
-}
-
-// Red Colors Component
-const Red = (props) => {
-    const colorDetails = props.colorDetails;
-    const redOnly = colorDetails.filter(color => color.category.includes('Red'))
-
-    return (
-        redOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div role="listitem" className="card" key={id}>
-                <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
-                    <h5 className="card-title">{name}</h5>
-                    <h6 className="card-subtitle mb-2">{hexcode}</h6>
-                    <p className="card-text">Tags: {category}</p>
-                    <div className="copied">Copied!</div>
-                </div>
-            </div>
-        ))
-    )
-}
-
-// Blue Colors Component
-const Blue = (props) => {
-    const colorDetails = props.colorDetails;
-    const blueOnly = colorDetails.filter(color => color.category.includes('Blue'))
-
-    return (
-        blueOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div role="listitem" className="card" key={id}>
-                <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
-                    <h5 className="card-title">{name}</h5>
-                    <h6 className="card-subtitle mb-2">{hexcode}</h6>
-                    <p className="card-text">Tags: {category}</p>
-                    <div className="copied">Copied!</div>
-                </div>
-            </div>
-        ))
-    )
-}
-
-// Green Colors Component
-const Green = (props) => {
-    const colorDetails = props.colorDetails;
-    const greenOnly = colorDetails.filter(color => color.category.includes('Green'))
-
-    return (
-        greenOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div role="listitem" className="card" key={id}>
-                <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
-                    <h5 className="card-title">{name}</h5>
-                    <h6 className="card-subtitle mb-2">{hexcode}</h6>
-                    <p className="card-text">Tags: {category}</p>
-                    <div className="copied">Copied!</div>
-                </div>
-            </div>
-        ))
-    )
-}
-
-// Purple Colors Component
-const Purple = (props) => {
-    const colorDetails = props.colorDetails;
-    const purpleOnly = colorDetails.filter(color => color.category.includes('Purple'))
-
-    return (
-        purpleOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div role="listitem" className="card" key={id}>
-                <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
-                    <h5 className="card-title">{name}</h5>
-                    <h6 className="card-subtitle mb-2">{hexcode}</h6>
-                    <p className="card-text">Tags: {category}</p>
-                    <div className="copied">Copied!</div>
-                </div>
-            </div>
-        ))
-    )
-}
-
-// Orange Colors Component
-const Orange = (props) => {
-    const colorDetails = props.colorDetails;
-    const orangeOnly = colorDetails.filter(color => color.category.includes('Orange'))
-
-    return (
-        orangeOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div role="listitem" className="card" key={id}>
-                <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
-                    <h5 className="card-title">{name}</h5>
-                    <h6 className="card-subtitle mb-2">{hexcode}</h6>
-                    <p className="card-text">Tags: {category}</p>
-                    <div className="copied">Copied!</div>
-                </div>
-            </div>
-        ))
-    )
-}
-
-// Yellow Colors Component
-const Yellow = (props) => {
-    const colorDetails = props.colorDetails;
-    const yellowOnly = colorDetails.filter(color => color.category.includes('Yellow'))
-
-    return (
-        yellowOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div role="listitem" className="card" key={id}>
-                <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
-                    <h5 className="card-title">{name}</h5>
-                    <h6 className="card-subtitle mb-2">{hexcode}</h6>
-                    <p className="card-text">Tags: {category}</p>
-                    <div className="copied">Copied!</div>
-                </div>
-            </div>
-        ))
-    )
-}
-
-// Pink Colors Component
-const Pink = (props) => {
-    const colorDetails = props.colorDetails;
-    const pinkOnly = colorDetails.filter(color => color.category.includes('Pink'))
-
-    return (
-        pinkOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div role="listitem" className="card" key={id}>
-                <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
-                    <h5 className="card-title">{name}</h5>
-                    <h6 className="card-subtitle mb-2">{hexcode}</h6>
-                    <p className="card-text">Tags: {category}</p>
-                    <div className="copied">Copied!</div>
-                </div>
-            </div>
-        ))
-    )
-}
-
-// Brown Colors Component
-const Brown = (props) => {
-    const colorDetails = props.colorDetails;
-    const brownOnly = colorDetails.filter(color => color.category.includes('Brown'))
-
-    return (
-        brownOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div role="listitem" className="card" key={id}>
-                <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
-                    <h5 className="card-title">{name}</h5>
-                    <h6 className="card-subtitle mb-2">{hexcode}</h6>
-                    <p className="card-text">Tags: {category}</p>
-                    <div className="copied">Copied!</div>
-                </div>
-            </div>
-        ))
-    )
-}
-
-// Gray Colors Component
-const Gray = (props) => {
-    const colorDetails = props.colorDetails;
-    const grayOnly = colorDetails.filter(color => color.category.includes('Gray'))
-
-    return (
-        grayOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div role="listitem" className="card" key={id}>
-                <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
-                    <h5 className="card-title">{name}</h5>
-                    <h6 className="card-subtitle mb-2">{hexcode}</h6>
-                    <p className="card-text">Tags: {category}</p>
-                    <div className="copied">Copied!</div>
-                </div>
-            </div>
-        ))
-    )
-}
-
-// Black Colors Component
-const Black = (props) => {
-    const colorDetails = props.colorDetails;
-    const blackOnly = colorDetails.filter(color => color.category.includes('Black'))
-
-    return (
-        blackOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div role="listitem" className="card" key={id}>
-                <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
-                    <h5 className="card-title">{name}</h5>
-                    <h6 className="card-subtitle mb-2">{hexcode}</h6>
-                    <p className="card-text">Tags: {category}</p>
-                    <div className="copied">Copied!</div>
-                </div>
-            </div>
-        ))
-    )
-}
-
-// White Colors Component
-const White = (props) => {
-    const colorDetails = props.colorDetails;
-    const whiteOnly = colorDetails.filter(color => color.category.includes('White'))
-
-    return (
-        whiteOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div role="listitem" className="card" key={id}>
-                <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
-                    <h5 className="card-title">{name}</h5>
-                    <h6 className="card-subtitle mb-2">{hexcode}</h6>
-                    <p className="card-text">Tags: {category}</p>
-                    <div className="copied">Copied!</div>
-                </div>
-            </div>
-        ))
-    )
-}
-
-// Brand Colors Component
-const Brand = (props) => {
-    const colorDetails = props.colorDetails;
-    const brandOnly = colorDetails.filter(color => color.category.includes('Brand'))
-
-    return (
-        brandOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div role="listitem" className="card" key={id}>
-                <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
-                    <h5 className="card-title">{name}</h5>
-                    <h6 className="card-subtitle mb-2">{hexcode}</h6>
-                    <p className="card-text">Tags: {category}</p>
-                    <div className="copied">Copied!</div>
-                </div>
-            </div>
-        ))
-    )
-}
-
-// NBA Colors Component
-const NBA = (props) => {
-    const colorDetails = props.colorDetails;
-    const nbaOnly = colorDetails.filter(color => color.category.includes('NBA'))
-
-    return (
-        nbaOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div role="listitem" className="card" key={id}>
-                <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
-                    <h5 className="card-title">{name}</h5>
-                    <h6 className="card-subtitle mb-2">{hexcode}</h6>
-                    <p className="card-text">Tags: {category}</p>
-                    <div className="copied">Copied!</div>
-                </div>
-            </div>
-        ))
-    )
-}
-
-// School Colors Component
-const School = (props) => {
-    const colorDetails = props.colorDetails;
-    const schoolOnly = colorDetails.filter(color => color.category.includes('School'))
-
-    return (
-        schoolOnly.map(({id, backgroundColor, name, hexcode, category, color}) => (
-            <div role="listitem" className="card" key={id}>
-                <div className="card-body" style={Object.assign({backgroundColor}, {color})} data-clipboard-text={hexcode} title="Click to copy color hexcode">
-                    <h5 className="card-title">{name}</h5>
-                    <h6 className="card-subtitle mb-2">{hexcode}</h6>
-                    <p className="card-text">Tags: {category}</p>
-                    <div className="copied">Copied!</div>
-                </div>
-            </div>
-        ))
-    )
-}
-
+import All from './All';
+import Red from './Red';
+import Blue from './Blue';
+import Green from './Green';
+import Purple from './Purple';
+import Orange from './Orange';
+import Yellow from './Yellow';
+import Pink from './Pink';
+import Brown from './Brown';
+import Gray from './Gray';
+import Black from './Black';
+import White from './White';
+import Brand from './Brand';
+import NBA from './NBA';
+import School from './School';
 
 class Cards extends Component {
     constructor(props) {
         super(props); 
 
         this.state = {
-            search: '',
+            // show all on page load
             showAll: true,
-            showRed: false,
-            showBlue: false,
             scrolling: false
         }
 
@@ -415,7 +109,7 @@ class Cards extends Component {
                 this.setState({ showSchool: true, showAll: false, showRed: false, showGreen: false, showPurple: false, showOrange: false, showYellow: false, showPink: false, showBrown: false, showGray: false, showBlack: false, showWhite: false, showBrand: false, showNBA: false, showBlue: false });
                 break;
             default: 
-            console.log('nothing to show')
+            console.log('nothing to see')
         }
     }
 
