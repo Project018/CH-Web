@@ -1,19 +1,30 @@
-.card-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    .card {
-        width: 18rem;
-        margin: 10px;
-        .card-body {
-            cursor: pointer;
-            .copied {
-                display: none;
-                &.copy-tooltip {
-                    display: block; 
+main {
+    .card-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        .card {
+            width: 18rem;
+            margin: 10px;
+            .card-body {
+                cursor: pointer;
+                .copied {
+                    display: none;
+                    &.copy-tooltip {
+                        display: block; 
+                    }
                 }
             }
+        }
+    }
+    @media (max-width: 768px) {
+        ._buttonGroup {
+            white-space: nowrap;
+            overflow-x: scroll;
+            padding: auto 0;
+            margin: auto 0;
+            max-width: none;
         }
     }
 }

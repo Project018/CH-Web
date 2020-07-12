@@ -352,7 +352,28 @@ class App extends Component {
         {id: 340, name: "Microsoft", backgroundColor: "#7FBA00", hexcode: "#7FBA00", rgb: '(127,186,0)', category: 'Brand, Green', full: 'Microsoft, #7FBA00, (127,186,0)', color: '#FFFFFF'},
         {id: 341, name: "Microsoft", backgroundColor: "#00A4EF", hexcode: "#00A4EF", rgb: '(0,164,239)', category: 'Brand, Blue', full: 'Microsoft, #00A4EF, (0,164,239)', color: '#FFFFFF'},
         {id: 342, name: "Microsoft", backgroundColor: "#FFB900", hexcode: "#FFB900", rgb: '(255,185,0)', category: 'Brand, Yellow', full: 'Microsoft, #FFB900, (255,185,0)', color: '#FFFFFF'},
-      ],
+        {id: 343, name: "Portland Trail Blazers", backgroundColor: "#E03A3E", hexcode: "#E03A3E", rgb: '(224,58,62)', category: 'NBA, Red', full: 'Portland Trail Blazers, #E03A3E, (224,58,62)', color: '#FFFFFF'},
+        {id: 344, name: "Miami Heat", backgroundColor: "#98002E", hexcode: "#98002E", rgb: '(152,0,46)', category: 'NBA, Red', full: 'Miami Heat, #98002E, (152,0,46)', color: '#FFFFFF'},
+        {id: 345, name: "Miami Heat", backgroundColor: "#F9A01B", hexcode: "#F9A01B", rgb: '(249,160,27)', category: 'NBA, Yellow', full: 'Miami Heat, #F9A01B, (249,160,27)', color: '#000000'},
+        {id: 346, name: "Milwaukee Bucks", backgroundColor: "#00471B", hexcode: "#00471B", rgb: '(0,71,27)', category: 'NBA, Green', full: 'Milwaukee Bucks, #00471B, (0,71,27)', color: '#FFFFFF'},
+        {id: 347, name: "Milwaukee Bucks", backgroundColor: "#EEE1C6", hexcode: "#EEE1C6", rgb: '(240,235,210)', category: 'NBA, Yellow', full: 'Milwaukee Bucks, #EEE1C6, (240,235,210)', color: '#000000'},
+        {id: 348, name: "Phoenix Suns", backgroundColor: "#1D1160", hexcode: "#1D1160", rgb: '(29,17,96)', category: 'NBA, Purple', full: 'Phoenix Suns, #1D1160, (29,17,96)', color: '#FFFFFF'},
+        {id: 349, name: "Phoenix Suns", backgroundColor: "#E56020", hexcode: "#E56020", rgb: '(229,95,32)', category: 'NBA, Orange', full: 'Phoenix Suns, #E56020, (229,95,32)', color: '#FFFFFF'},
+        {id: 350, name: "Memphis Grizzlies", backgroundColor: "#5D76A9", hexcode: "#5D76A9", rgb: '(229,95,32)', category: 'NBA, Blue', full: 'Memphis Grizzlies, #5D76A9, (229,95,32)', color: '#FFFFFF'},
+        {id: 351, name: "Memphis Grizzlies", backgroundColor: "#12173F", hexcode: "#12173F", rgb: '(18,23,63)', category: 'NBA, Blue', full: 'Memphis Grizzlies, #12173F, (18,23,63)', color: '#FFFFFF'},
+        {id: 352, name: "Seattle Supersonics", backgroundColor: "#00653A", hexcode: "#00653A", rgb: '(18,23,63)', category: 'NBA, Green', full: 'Seattle Supersonics, #00653A, (18,23,63)', color: '#FFFFFF'},
+        {id: 353, name: "Seattle Supersonics", backgroundColor: "#FFC200", hexcode: "#FFC200", rgb: '(255,194,32)', category: 'NBA, Yellow', full: 'Seattle Supersonics, #FFC200, (255,194,32)', color: '#000000'},
+        {id: 354, name: "Charlotte Hornets", backgroundColor: "#1D1160", hexcode: "#1D1160", rgb: '(29,17,96)', category: 'NBA, Purple', full: 'Charlotte Hornets, #1D1160, (29,17,96)', color: '#FFFFFF'},
+        {id: 355, name: "Charlotte Hornets", backgroundColor: "#00788C", hexcode: "#00788C", rgb: '(0,120,140)', category: 'NBA, Blue', full: 'Charlotte Hornets, #00788C, (0,120,140)', color: '#FFFFFF'},
+        {id: 356, name: "Minnesota Timberwolves", backgroundColor: "#0C2340", hexcode: "#0C2340", rgb: '(12,35,64)', category: 'NBA, Blue', full: 'Minnesota Timberwolves, #0C2340, (12,35,64)', color: '#FFFFFF'},
+        {id: 357, name: "Minnesota Timberwolves", backgroundColor: "#236192", hexcode: "#236192", rgb: '(35,97,146)', category: 'NBA, Blue', full: 'Minnesota Timberwolves, #236192, (35,97,146)', color: '#FFFFFF'},
+        {id: 358, name: "Minnesota Timberwolves", backgroundColor: "#78BE20", hexcode: "#78BE20", rgb: '(120,190,32)', category: 'NBA, Green', full: 'Minnesota Timberwolves, #78BE20, (120,190,32)', color: '#FFFFFF'},
+        {id: 359, name: "Boston Celtics", backgroundColor: "#007A33", hexcode: "#007A33", rgb: '(0,122,51)', category: 'NBA, Green', full: 'Boston Celtics, #007A33, (0,122,51)', color: '#FFFFFF'},
+        {id: 360, name: "Boston Celtics", backgroundColor: "#BA9653", hexcode: "#BA9653", rgb: '(139,111,78)', category: 'NBA, Gold', full: 'Boston Celtics, #BA9653, (139,111,78)', color: '#FFFFFF'},
+        {id: 361, name: "Cleveland Cavaliers", backgroundColor: "#860038", hexcode: "#860038", rgb: '(134,0,56)', category: 'NBA, Red, Brown', full: 'Cleveland Cavaliers, #860038, (134,0,56)', color: '#FFFFFF'},
+        {id: 362, name: "Cleveland Cavaliers", backgroundColor: "#041E42", hexcode: "#041E42", rgb: '(4,30,66)', category: 'NBA, Blue', full: 'Cleveland Cavaliers, #041E42, (4,30,66)', color: '#FFFFFF'},
+        {id: 363, name: "Cleveland Cavaliers", backgroundColor: "#FDBB30", hexcode: "#FDBB30", rgb: '(253,187,48)', category: 'NBA, Gold', full: 'Cleveland Cavaliers, #FDBB30, (253,187,48)', color: '#000000'}
+      ]
     };
   }
   

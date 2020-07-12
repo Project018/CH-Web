@@ -1,4 +1,4 @@
-.card-container {
+main .card-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,20 +13,30 @@
           justify-content: center;
 }
 
-.card-container .card {
+main .card-container .card {
   width: 18rem;
   margin: 10px;
 }
 
-.card-container .card .card-body {
+main .card-container .card .card-body {
   cursor: pointer;
 }
 
-.card-container .card .card-body .copied {
+main .card-container .card .card-body .copied {
   display: none;
 }
 
-.card-container .card .card-body .copied.copy-tooltip {
+main .card-container .card .card-body .copied.copy-tooltip {
   display: block;
+}
+
+@media (max-width: 768px) {
+  main ._buttonGroup {
+    white-space: nowrap;
+    overflow-x: scroll;
+    padding: auto 0;
+    margin: auto 0;
+    max-width: none;
+  }
 }
 /*# sourceMappingURL=Cards.css.map */
