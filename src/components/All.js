@@ -13,11 +13,6 @@ clipboard.on('success', function(e) {
     e.clearSelection();
 });
 
-clipboard.on('error', function(e) {
-    console.error('Action:', e.action);
-    console.error('Trigger:', e.trigger);
-});
-
 function shuffleColors(array) {
     // Shuffle through objects in array 
     let i = array.length - 1;
