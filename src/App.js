@@ -372,7 +372,9 @@ class App extends Component {
         {id: 360, name: "Boston Celtics", backgroundColor: "#BA9653", hexcode: "#BA9653", rgb: '(139,111,78)', category: 'NBA, Gold', full: 'Boston Celtics, #BA9653, (139,111,78)', color: '#FFFFFF'},
         {id: 361, name: "Cleveland Cavaliers", backgroundColor: "#860038", hexcode: "#860038", rgb: '(134,0,56)', category: 'NBA, Red, Brown', full: 'Cleveland Cavaliers, #860038, (134,0,56)', color: '#FFFFFF'},
         {id: 362, name: "Cleveland Cavaliers", backgroundColor: "#041E42", hexcode: "#041E42", rgb: '(4,30,66)', category: 'NBA, Blue', full: 'Cleveland Cavaliers, #041E42, (4,30,66)', color: '#FFFFFF'},
-        {id: 363, name: "Cleveland Cavaliers", backgroundColor: "#FDBB30", hexcode: "#FDBB30", rgb: '(253,187,48)', category: 'NBA, Gold', full: 'Cleveland Cavaliers, #FDBB30, (253,187,48)', color: '#000000'}
+        {id: 363, name: "Cleveland Cavaliers", backgroundColor: "#FDBB30", hexcode: "#FDBB30", rgb: '(253,187,48)', category: 'NBA, Gold', full: 'Cleveland Cavaliers, #FDBB30, (253,187,48)', color: '#000000'},
+        {id: 364, name: "University of Oregon", backgroundColor: "#FEE11A", hexcode: "#FEE11A", rgb: '(254,225,26)', category: 'School, Yellow', full: 'University of Oregon, #FEE11A, (254,225,26)', color: '#000000'},
+        {id: 365, name: "University of Oregon", backgroundColor: "#007030", hexcode: "#007030", rgb: '(0,112,48)', category: 'School, Green', full: 'University of Oregon, #007030, (0,112,48)', color: '#000000'},
       ]
     };
   }
